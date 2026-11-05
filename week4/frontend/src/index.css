@@ -1,0 +1,71 @@
+
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  color: #1f2937;
+  background: #f3f4f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-weight: 400;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default Vite root restrictions */
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: inherit;
+}
+
+/* Buttons */
+button,
+input {
+  font-family: inherit;
+}
+
+/* Remove default button styling */
+button {
+  outline: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #root {
+    padding: 12px;
+  }
+}
