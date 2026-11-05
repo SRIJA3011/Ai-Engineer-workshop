@@ -12,11 +12,13 @@ load_dotenv()
 
 app = FastAPI()
 
-# Allow CORS for local testing and future Vercel deployment
+# Get allowed origins from env, fallback to "*"
+origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # We will restrict this in production
-    allow_credentials=True,
+    allow_origins=origins,
+    allow_credentials=True, 
     allow_methods=["*"],
     allow_headers=["*"],
 )
